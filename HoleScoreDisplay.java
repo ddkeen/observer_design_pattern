@@ -1,18 +1,18 @@
 public class HoleScoreDisplay implements Observer{
-	Subject golfer;
+    private Subject golfer;
+    private int strokes;
+    private int par;
 	
-	public Cat(Subject foodBowl) {
-		this.foodBowl = foodBowl;
-		foodBowl.registerObserver(this);
+	public HoleScoreDisplay(Subject golfer) {
+		this.golfer = golfer;
+		//golfer.registerObserver(this);
 	}
 	
-	public void update(String food) {
-		if(food.equals("tuna")) {
-			eat();
-		}
+	public void update(int strokes, int par) {
+		
 	}
 	
-	public void eat() {
-		System.out.println("cat eating");
+	private void displayCurrentScore() {
+		System.out.println("");
 	}
 }

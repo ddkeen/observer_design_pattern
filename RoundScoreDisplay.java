@@ -1,18 +1,18 @@
 public class RoundScoreDisplay implements Observer{
-	Subject golfer;
+    private Subject golfer;
+    private int strokesTotal;
+    private int parTotal;
 	
-	public Cat(Subject foodBowl) {
-		this.foodBowl = foodBowl;
-		foodBowl.registerObserver(this);
+	public RoundScoreDisplay(Subject golfer) {
+		this.golfer = golfer;
+		golfer.registerObserver(this);
 	}
 	
-	public void update(String food) {
-		if(food.equals("tuna")) {
-			eat();
-		}
+	public void update(int strokes, int par) {
+		
 	}
 	
-	public void eat() {
-		System.out.println("cat eating");
+	private void displayRoundScore() {
+		System.out.println("");
 	}
 }
