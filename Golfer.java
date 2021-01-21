@@ -22,13 +22,13 @@ public class Golfer implements Subject {
 	@Override
 	public void notifyObservers(int strokes, int par) {
 		for(Observer observer : observers) {
-            //observer.update(strokes);
-            //observer.update(par);
+			System.out.println();
+			observer.update(strokes, par);
 		}
     }
     
     public void enterScore(int strokes, int par) {
-		//notifyObservers();
+		notifyObservers(strokes, par);
     }
     
     public String getName() {
